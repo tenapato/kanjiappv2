@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import FlashcardList from './FlashcardList';
+import './app.css';
+import axios from 'axios';
 
 function App() {
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS);
@@ -15,8 +17,8 @@ const SAMPLE_FLASHCARDS = [
   {
     id: 1,
     kanji: '語',
-    kunyomi: ['かたる','かたらう'],
-    onyomi: ['ゴ'],
+    kunyomis: ['かたる','かたらう'],
+    onyomis: ['ゴ'],
     stroke_count: 14,
     meanings: ["word","speech","language"],
   
@@ -24,10 +26,10 @@ const SAMPLE_FLASHCARDS = [
   {
     id: 2,
     kanji: '日本人',
-    kunyomi: ['かたる','かたらう'],
-    onyomi: ['ゴ'],
-    stroke_count: 14,
-    meanings: ["word","speech","language"],
+    kunyomis: ['にほんじん'],
+    onyomis: ['に'],
+    stroke_count: 7,
+    meanings: ["Japanese person"],
   
   },
 
